@@ -1,38 +1,573 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;300;500&family=Bellefair&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Barlow Condensed", serif;
+  font-size: 16px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*navbar*/
+.toggle {
+  display: none;
+}
+.nav-wrapper {
+  margin-top: 30px;
+}
+.navbar-mobile {
+  display: none;
+}
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.navbar ul {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.navbar ul li {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1.8px;
+  margin-left: 40px;
+  text-transform: uppercase;
+}
+.active {
+  border-bottom: 2px solid #fff;
+}
+.link {
+  color: #fff;
+}
+.link:hover {
+  opacity: 0.8;
+  border-bottom: 2px solid #fff;
+  transition: ease-in;
+}
+.line {
+  height: 5px;
+  width: 500px;
+  border-bottom: 1px solid rgb(139, 137, 137);
+  margin-left: 180px;
+}
+.logo {
+  position: absolute;
+  margin: 30px 0 0 60px;
+}
+.nav-links {
+  background: rgba(255, 255, 255, 5%);
+  backdrop-filter: blur(80px);
+  height: 100px;
+  width: 800px;
+  padding-right: 100px;
+}
+.link span {
+  font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+/*home page*/
+section {
+  max-width: 1100px;
+  margin: auto;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+.home h1,
+h3 {
+  text-transform: uppercase;
+}
+.home button {
+  font-size: 2rem;
+  background-color: #fff;
+  padding: 90px 40px;
+  border-radius: 50%;
+  font-weight: 200;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid #fff;
+}
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.bg-img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  margin-bottom: -5px;
+}
+.home-heading {
+  color: #fff;
+  letter-spacing: 2px;
+}
+.home-heading h1 {
+  font-size: 10rem;
+  font-weight: 500;
+}
+.home-heading p,
+h3 {
+  font-weight: 300;
+}
+.home-heading h3 {
+  font-size: 1.8rem;
+}
+.home-heading p {
+  font-size: 1.1rem;
+  padding-right: 180px;
+  text-align: justify;
+}
+/*destination page*/
+.destination {
+  color: #fff;
+  margin-top: 60px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.destination .image {
+  margin-right: 150px;
+}
+.destination .heading {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+}
+.destination h1 span {
+  color: rgb(122, 121, 121);
+}
+.des-names {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: rgb(122, 121, 121);
+}
+.des-names .dName {
+  margin-right: 20px;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+.des-names .dName:hover {
+  color: #fff;
+}
+.nameActive {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+.des-main h1 {
+  font-weight: 300;
+  font-size: 9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.des-main p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.des-distance {
+  display: flex;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 20px;
+  border-top: 1px solid rgb(97, 97, 97);
+  padding-top: 20px;
+}
+.avg-distance {
+  margin-right: 100px;
+}
+.des-distance span {
+  color: rgb(122, 121, 121);
+}
+/*crew page*/
+.crew {
+  color: #fff;
+  margin-top: 60px;
+}
+.crew .heading {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.crew h1 span {
+  color: rgb(122, 121, 121);
+}
+.role {
+  color: rgb(122, 121, 121);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+.crew-name {
+  text-transform: uppercase;
+  font-size: 4.8rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+.crew p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  width: 80%;
+  text-align: justify;
+}
+.crew .image img {
+  height: 600px;
+  width: 500px;
+}
+.dots {
+  display: flex;
+  margin-top: 30px;
+}
+.dot {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(122, 121, 121);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.dot:hover {
+  background-color: #fff;
+}
+.dotActive {
+  background-color: #fff;
+}
+/*technology page*/
+.technology {
+  color: #fff;
+  margin-top: 60px;
+}
+.technology .heading {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.technology h1 span {
+  color: rgb(122, 121, 121);
+}
+.terminology {
+  color: rgb(122, 121, 121);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+.tech-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tech-info p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  width: 80%;
+  text-align: justify;
+}
+.numbers {
+  margin-right: 50px;
+}
+.number {
+  padding: 30px 35px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.number:not(:last-child) {
+  margin-bottom: 20px;
+}
+.number:hover {
+  background-color: #fff;
+  color: #000000;
+}
+.numberActive {
+  background-color: #fff;
+  color: #000000;
+}
+.tech-name {
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1200px) {
+  .line {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+  }
+  .nav-links {
+    padding: 0;
+    width: 650px;
+    padding-right: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .logo {
+    position: relative;
+    margin: 30px 0 0 40px;
+  }
+  .home {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+  }
+  .home p {
+    text-align: center;
+    margin: auto;
+    padding: 0;
+    width: 60%;
+    margin: 20px auto 40px;
+  }
+  .home-heading {
+    margin-top: 50px;
+  }
+  .destination {
+    width: 90%;
+    margin-top: 100px;
+  }
+  .flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .destination .image {
+    margin: 30px auto 50px;
+  }
+  .destination .image img {
+    height: 350px;
+    width: auto;
+  }
+  .des-names {
+    align-items: center;
+    justify-content: center;
+  }
+  .des-main p {
+    width: 60%;
+    margin: 20px auto;
+  }
+  .des-distance {
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .crew {
+    width: 90%;
+    margin-top: 100px;
+  }
+  .crew-info {
+    margin-top: 150px;
+    text-align: center;
+  }
+  .crew-info h1 {
+    margin: 30px auto;
+  }
+  .crew-info p {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+  .dots {
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto;
+  }
+  .technology {
+    width: 90%;
+    margin-top: 100px;
+  }
+  .technology .flex {
+    flex-direction: column-reverse;
+  }
+  .technology .image img {
+    width: 100%;
+    margin: 70px auto;
+  }
+  .tech-info {
+    flex-direction: column;
+  }
+  .numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .number {
+    margin: 0 15px;
+  }
+  .number:not(:last-child) {
+    margin-bottom: auto;
+  }
+  .tech-main {
+    margin-top: 50px;
+  }
+  .tech-main p {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+  }
+  .tech-main h1 {
+    margin: 30px 0;
   }
 }
+@media (max-width: 600px) {
+  .toggle {
+    display: block;
+  }
+  .navbar {
+    display: none;
+  }
+  .bg-img {
+    height: 140%;
+  }
+  .toggle {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    margin: 10px 30px 0 0;
+    cursor: pointer;
+  }
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+  }
+  .navbar-mobile ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbar-mobile ul li {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1.8px;
+    margin-left: 40px;
+    text-transform: uppercase;
+  }
+  .navbar-mobile ul {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .navbar-mobile ul li {
+    font-size: 1.2rem;
+    margin-top: 35px;
+  }
+  .navbar-mobile ul li:first-child {
+    margin-top: 100px;
+  }
+  .navbar-mobile .nav-links {
+    height: 100%;
+    width: 80vw;
+  }
+  .home {
+    margin-top: 30px;
+  }
+  .home h1 {
+    font-size: 6rem;
+  }
+  .home h3 {
+    font-size: 2.5rem;
+  }
+  .home p {
+    width: 100%;
+  }
+  .home button {
+    font-size: 1rem;
+    padding: 70px 40px;
+  }
+  .destination .image img {
+    height: 250px;
+    width: auto;
+    margin-top: -20px;
+  }
+  .des-names .dName{
+    margin: auto 10px;
+  }
+  .des-main h1{
+    font-size: 6rem;
+  }
+  .des-main p{
+    width: 100%;
+    text-align: justify;
+  }
+  .avg-distance, .{
+    font-size: 2rem;
+  }
+  .crew .flex{
+    flex-direction: column-reverse;
+  }
+  .crew .image img{
+    height: 400px;
+    width: 95%;
+    margin: 30px auto;
+  }
+  .crew-info{
+    margin-top: 30px;
+    margin: auto;
+  }
+  .role{
+    font-size: 2rem;
+  }
+  .crew-name{
+    font-size: 3rem;
+  }
+  .crew-info p{
+    width: 100%;
+    text-align: justify;
+  }
+  .dots{
+    margin-top: 35px;
+  }
+  .number{
+    padding: 15px 22px;
+  }
+  .terminology{
+    font-size: 2rem;
+  }
+  .tech-main h1{
+    font-size: 3rem;
+    margin: 40px auto;
+  }
+  .tech-main p{
+    width: 100%;
+    text-align: justify;
+  }
+  .des-distance{
+    font-size: 1.5rem;
+    width: 100%;
+  }
+}
+
