@@ -11,7 +11,7 @@ a {
   list-style: none;
 }
 body {
-  font-family: "Barlow Condensed", serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-size: 16px;
 }
 /*navbar*/
